@@ -20,38 +20,31 @@ fullPrice(0.21), rendendole costanti per semplificare i calcoli successivi*/
 
 // const 0.21 € * km
 const fullPrice = (km * 0.21);
-console.log(fullPrice)
+
 
 //const price U 18
 const priceU18 = (fullPrice - (fullPrice * 20 / 100));
-console.log(priceU18);
+
 
 //const price Ov 65
 const priceOv65 = (fullPrice - (fullPrice * 40 / 100));
-console.log(priceOv65)
+
 
 
 
 // 20% discount U 18
 if (age < 18) {
-    let finalPrice = (km * priceU18);
-    console.log(`${finalPrice} €  Hai diritto allo sconto del 20%`);
-    alert(`${finalPrice.toFixed(2)} € è il prezzo del tuo biglietto`)
 
-}
+    alert(`${priceU18} € è il prezzo del tuo biglietto`)
+    console.log(priceU18);
+    // 40% discount Ov 65
+} else if (age >= 65) {
 
 
-// 40% discount Ov 65
-if (age >= 65) {
+    alert(`${priceOv65} € è il prezzo del tuo biglietto`)
+    console.log(priceOv65)
+} else {
 
-    let finalPrice = (km * priceOv65);
-    console.log(`${finalPrice} €  Hai diritto allo sconto del 40%`);
-    alert(`${finalPrice.toFixed(2)} € è il prezzo del tuo biglietto`)
-}
-
-// fullPrice, from 18 to 64 age
-else {
-    let finalPrice = (km * fullPrice);
-    console.log(`${finalPrice} € Nessuno sconto applicabile`)
-    alert(`${finalPrice.toFixed(2)} € è il prezzo del tuo biglietto`)
+    alert(`${fullPrice} € è il prezzo del tuo biglietto`)
+    console.log(fullPrice)
 }

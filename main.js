@@ -34,8 +34,8 @@ console.log(priceOv65)
 
 // 20% discount U 18
 if (age < 18) {
-    console.log("Hai diritto allo sconto del 20%");
     let finalPrice = (km * priceU18);
+    console.log(`${finalPrice} €  Hai diritto allo sconto del 20%`);
     alert(`${finalPrice.toFixed(2)} € è il prezzo del tuo biglietto`)
 
 }
@@ -43,14 +43,15 @@ if (age < 18) {
 
 // 40% discount Ov 65
 if (age >= 65) {
-    console.log("Hai diritto allo sconto del 40%");
+
     let finalPrice = (km * priceOv65);
+    console.log(`${finalPrice} €  Hai diritto allo sconto del 40%`);
     alert(`${finalPrice.toFixed(2)} € è il prezzo del tuo biglietto`)
 }
 
 // fullPrice, from 18 to 64 age
 else {
     let finalPrice = (km * fullPrice);
-    console.log("Nessuno sconto applicabile")
+    console.log(`${finalPrice} € Nessuno sconto applicabile`)
     alert(`${finalPrice.toFixed(2)} € è il prezzo del tuo biglietto`)
 }
